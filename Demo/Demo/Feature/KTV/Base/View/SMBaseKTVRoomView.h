@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SMRoom.h"
+#import "SMMessage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)makeMsgConstraints:(void(^)(MASConstraintMaker *make))block;
 
 - (void)relayoutMsg;
+
+- (void)insertMsg:(SMMessage *)msg;
+
+- (void)reloadData:(NSArray<SMMessage*>*)msgs;
 
 @end
 

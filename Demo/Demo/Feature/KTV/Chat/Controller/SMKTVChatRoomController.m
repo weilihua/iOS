@@ -19,6 +19,7 @@
     [super viewDidLoad];
     
     [self initView];
+    [self reloadData];
 }
 
 - (void)initView {

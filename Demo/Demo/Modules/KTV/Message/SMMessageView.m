@@ -13,7 +13,6 @@
 @interface SMMessageView ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong)UITableView *tableView;
-@property(nonatomic, strong)NSMutableArray<SMMessage*> *msgs;
 
 @end
 
@@ -27,6 +26,11 @@
         [self initView];
     }
     return self;
+}
+
+- (void)setMsgs:(NSMutableArray<SMMessage *> *)msgs {
+    _msgs = msgs;
+    [self.tableView reloadData];
 }
 
 #pragma mark -
@@ -61,6 +65,7 @@
 - (void)insertMsg:(SMMessage *)msg {
     if (msg) {
         [self.msgs addObject:msg];
+        [self.tableView reloadData];
     }
 }
 

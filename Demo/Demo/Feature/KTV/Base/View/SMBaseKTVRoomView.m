@@ -81,6 +81,14 @@
     return [constraintMaker install];
 }
 
+- (void)insertMsg:(SMMessage *)msg {
+    [self.msgView insertMsg:msg];
+}
+
+- (void)reloadData:(NSArray<SMMessage*>*)msgs {
+    self.msgView.msgs = [msgs mutableCopy];
+}
+
 #pragma mark -
 #pragma mark Button Event
 

@@ -30,4 +30,9 @@
     }];
 }
 
+- (void)updateData:(SMMessage *)msg {
+    [super updateData:msg];
+    self.lbMsg.text = msg.content;
+}
+
 @end

@@ -11,13 +11,13 @@
 static SMKTVManager* instance = nil;
 
 NSString *kSMJoinRoomSuccessNotify = @"joinRoomSuccessNotify";// 加入房间成功通知
+NSString *kSMSwitchRoomSuccessNotify = @"switchRoomSuccessNotify";// 切换房间成功通知
 
 @interface SMKTVManager()
 
 @property(nonatomic, strong, nullable)SMRoom *room;
 @property(nonatomic, strong, nullable)NSArray<SMUser*> *users;
-@property(nonatomic, strong, nullable)NSArray<SMUser*> *seats;
-@property(nonatomic, strong, nullable)NSArray<SMUser*> *messages;
+@property(nonatomic, strong, nullable)NSArray<SMSeat*> *seats;
 
 @end
 
@@ -78,8 +78,18 @@ NSString *kSMJoinRoomSuccessNotify = @"joinRoomSuccessNotify";// 加入房间成
 /// 切换房间
 - (void)switchRoomWityType:(SMRoomType)type {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self joinRoomSuccess];
+        [self switchRoomSuccess:type];
     });
+}
+
+- (void)insertMsg:(SMMessage *)msg {
+    if (!msg) {
+        return;
+    }
+    if (!self.messages) {
+        self.messages = [NSMutableArray new];
+    }
+    [self.messages addObject:msg];
 }
 
 #pragma mark -
@@ -90,12 +100,15 @@ NSString *kSMJoinRoomSuccessNotify = @"joinRoomSuccessNotify";// 加入房间成
     user.userId = 1000;
     user.userName = @"User1";
     
-    
-    [NSNotificationCenter.defaultCenter postNotificationName:kSMJoinRoomSuccessNotify object:nil];
+    [NSNotificationCenter.defaultCenter postNotificationName:kSMJoinRoomSuccessNotify
+                                                      object:user];
 }
 
 - (void)switchRoomSuccess:(SMRoomType)type {
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [NSNotificationCenter.defaultCenter postNotificationName:kSMSwitchRoomSuccessNotify
+                                                          object:@(type)];
+    });
 }
 
 #pragma mark -
@@ -108,13 +121,17 @@ NSString *kSMJoinRoomSuccessNotify = @"joinRoomSuccessNotify";// 加入房间成
 }
 
 /// 请求加入房间
-+ (void)requestJoinRoom {
++ (void)requestJoinRoom:(NSInteger)roomId {
     [SMKTVManager.share requestJoinRoom];
 }
 
 /// 切换房间
 + (void)switchRoomWityType:(SMRoomType)type {
     [SMKTVManager.share switchRoomWityType:type];
+}
+
++ (void)insertMsg:(SMMessage *)msg {
+    [SMKTVManager.share insertMsg:msg];
 }
 
 @end

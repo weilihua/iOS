@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SMMessageView : UIView
 
+@property(nonatomic, strong)NSMutableArray<SMMessage*> *msgs;
+
 - (void)insertMsg:(SMMessage *)msg;
 
 @end

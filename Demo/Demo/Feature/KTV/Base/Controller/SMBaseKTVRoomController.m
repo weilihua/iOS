@@ -8,6 +8,7 @@
 #import "SMBaseKTVRoomController.h"
 #import "SMKTVChatRoomController.h"
 #import "SMKTVGameRoomController.h"
+#import "SMKTVManager.h"
 
 @interface SMBaseKTVRoomController ()
 
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
+    [self addNotification];
+    [self requestRoomInfo];
 }
 
 // 状态栏样式
@@ -27,6 +30,28 @@
 
 #pragma mark -
 #pragma mark Privete Method
+
+- (void)requestRoomInfo {
+    if (SMKTVManager.share.room) {
+        
+    } else {
+        [SMKTVManager requestRoomInfoWithId:self.roomId
+                                resultBlock:^(SMRoom * _Nonnull room, NSError * _Nonnull error) {
+            [SMKTVManager requestJoinRoom:self.roomId];
+        }];
+    }
+}
+
+- (void)addNotification {
+    [NSNotificationCenter.defaultCenter addObserver:self
+                                           selector:@selector(joinRoomSuccessNotify:)
+                                               name:kSMJoinRoomSuccessNotify
+                                             object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self
+                                           selector:@selector(switchRoomSuccessNotify:)
+                                               name:kSMSwitchRoomSuccessNotify
+                                             object:nil];
+}
 
 - (void)switchRoomType:(SMRoomType)type {
     if ([self isMemberOfClass:SMKTVChatRoomController.class] && type == SMRoomTypeChat) {
@@ -56,10 +81,34 @@
     self.navigationController.viewControllers = vcs;
 }
 
+- (void)reloadData {
+    [self.baseView reloadData:SMKTVManager.share.messages];
+}
+
 #pragma mark -
 #pragma mark BaseViewDelegate
 
 - (void)roomViewDidSwitchRoom:(SMRoomType)type {
+    [self switchRoomType:type];
+//    [SMKTVManager switchRoomWityType:type];
+}
+
+#pragma mark -
+#pragma mark Notification Method
+
+- (void)joinRoomSuccessNotify:(NSNotification*)notification {
+    SMUser *user = notification.object;
+    if (user) {
+        SMMessage *msg = [SMMessage new];
+        msg.type = SMMessageTypeSystem;
+        msg.content = [NSString stringWithFormat:@"%@加入了房间",user.userName];
+        [SMKTVManager insertMsg:msg];
+        [self.baseView insertMsg:msg];
+    }
+}
+
+- (void)switchRoomSuccessNotify:(NSNotification*)notification {
+    SMRoomType type = [notification.object integerValue];
     [self switchRoomType:type];
 }
 

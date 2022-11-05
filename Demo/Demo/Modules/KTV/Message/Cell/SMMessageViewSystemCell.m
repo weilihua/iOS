@@ -19,8 +19,7 @@
     [super initView];
     
     self.lbMsg = [[UILabel alloc] init];
-    self.lbMsg.backgroundColor = UIColor.redColor;
-    self.lbMsg.textColor = UIColor.yellowColor;
+    self.lbMsg.textColor = UIColor.whiteColor;
     self.lbMsg.font = [UIFont systemFontOfSize:15];
     [self.lbMsg sizeToFit];
     [self.contentView addSubview:self.lbMsg];
@@ -28,6 +27,11 @@
         make.leading.equalTo(self.contentView).offset(16);
         make.centerY.equalTo(self.contentView);
     }];
+}
+
+- (void)updateData:(SMMessage *)msg {
+    [super updateData:msg];
+    self.lbMsg.text = msg.content;
 }
 
 @end

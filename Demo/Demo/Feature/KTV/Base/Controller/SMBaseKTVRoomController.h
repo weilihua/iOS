@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SMBaseKTVRoomController : UIViewController<SMBaseKTVRoomViewDelegate>
 
+@property(nonatomic, assign)NSInteger roomId;
 @property(nonatomic, strong)SMBaseKTVRoomView *baseView;
+
+- (void)reloadData;
 
 @end
 

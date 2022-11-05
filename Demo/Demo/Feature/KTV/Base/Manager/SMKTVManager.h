@@ -13,14 +13,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString *kSMNewKTVListViewController;
+extern NSString *kSMJoinRoomSuccessNotify;
+extern NSString *kSMSwitchRoomSuccessNotify;
 
 @interface SMKTVManager : NSObject
 
 @property(nonatomic, strong, readonly, nullable)SMRoom *room;
 @property(nonatomic, strong, readonly, nullable)NSArray<SMUser*> *users;
-@property(nonatomic, strong, readonly, nullable)NSArray<SMUser*> *seats;
-@property(nonatomic, strong, readonly, nullable)NSArray<SMUser*> *messages;
+@property(nonatomic, strong, readonly, nullable)NSArray<SMSeat*> *seats;
+@property(nonatomic, strong, nullable)NSMutableArray<SMMessage*> *messages;
 
 // 生成单例对象
 + (instancetype)share;
@@ -30,10 +31,12 @@ extern NSString *kSMNewKTVListViewController;
                   resultBlock:(void(^)(SMRoom *room, NSError *error))resultBlock;
 
 /// 请求加入房间
-+ (void)requestJoinRoom;
++ (void)requestJoinRoom:(NSInteger)roomId;
 
 /// 切换房间
 + (void)switchRoomWityType:(SMRoomType)type;
+
++ (void)insertMsg:(SMMessage *)msg;
 
 @end
 

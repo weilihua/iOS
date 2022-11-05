@@ -19,6 +19,7 @@
     [super viewDidLoad];
     
     [self initGameView];
+    [self reloadData];
 }
 
 - (void)initGameView {
