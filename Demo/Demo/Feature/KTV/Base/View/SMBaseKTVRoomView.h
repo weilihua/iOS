@@ -6,10 +6,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SMRoom.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol SMBaseKTVRoomViewDelegate <NSObject>
+
+@optional
+
+- (void)roomViewDidSwitchRoom:(SMRoomType)type;
+
+@end
+
 @interface SMBaseKTVRoomView : UIView
+
+@property(nonatomic, weak)id<SMBaseKTVRoomViewDelegate> delegate;
+
+- (void)addContentView:(UIView *)view;
+
+- (NSArray *)makeMsgConstraints:(void(^)(MASConstraintMaker *make))block;
+
+- (void)relayoutMsg;
 
 @end
 

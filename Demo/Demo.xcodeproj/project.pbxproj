@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		52923B008200FCBB988ED755 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57D88E0AD22E67585654EA0 /* Pods_Demo.framework */; };
 		B8251A9A29155115009CAB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8251A9929155115009CAB34 /* AppDelegate.m */; };
-		B8251AA329155115009CAB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8251AA129155115009CAB34 /* Main.storyboard */; };
 		B8251AA529155118009CAB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8251AA429155118009CAB34 /* Assets.xcassets */; };
 		B8251AA829155118009CAB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8251AA629155118009CAB34 /* LaunchScreen.storyboard */; };
 		B8251AAB29155118009CAB34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8251AAA29155118009CAB34 /* main.m */; };
@@ -20,6 +19,19 @@
 		B8251AD429155906009CAB34 /* SMBaseKTVRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8251AD329155906009CAB34 /* SMBaseKTVRoomView.m */; };
 		B8251AD729155929009CAB34 /* SMKTVChatRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8251AD629155929009CAB34 /* SMKTVChatRoomView.m */; };
 		B8251ADA2915593B009CAB34 /* SMKTVGameRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8251AD92915593B009CAB34 /* SMKTVGameRoomView.m */; };
+		B89348772915F37300C24DAF /* SMKTVManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348762915F37300C24DAF /* SMKTVManager.m */; };
+		B893487B2915F45700C24DAF /* SMGatewayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B893487A2915F45700C24DAF /* SMGatewayManager.m */; };
+		B89348812915F4D400C24DAF /* SMSeatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348802915F4D400C24DAF /* SMSeatManager.m */; };
+		B89348882915F51F00C24DAF /* SMUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348872915F51F00C24DAF /* SMUserManager.m */; };
+		B893488B2915F55900C24DAF /* SMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B893488A2915F55900C24DAF /* SMUser.m */; };
+		B893488E2915F57000C24DAF /* SMSeat.m in Sources */ = {isa = PBXBuildFile; fileRef = B893488D2915F57000C24DAF /* SMSeat.m */; };
+		B89348912915F58F00C24DAF /* SMMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348902915F58F00C24DAF /* SMMessage.m */; };
+		B89348942915F69700C24DAF /* SMRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348932915F69700C24DAF /* SMRoom.m */; };
+		B89348992915FDD800C24DAF /* QMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348982915FDD800C24DAF /* QMBaseModel.m */; };
+		B89348A2291617F600C24DAF /* SMMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348A1291617F600C24DAF /* SMMessageView.m */; };
+		B89348A62916195400C24DAF /* SMMessageViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348A52916195400C24DAF /* SMMessageViewBaseCell.m */; };
+		B89348A92916199400C24DAF /* SMMessageViewNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348A82916199400C24DAF /* SMMessageViewNormalCell.m */; };
+		B89348AC291619AA00C24DAF /* SMMessageViewSystemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89348AB291619AA00C24DAF /* SMMessageViewSystemCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +40,6 @@
 		B8251A9529155115009CAB34 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8251A9829155115009CAB34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8251A9929155115009CAB34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B8251AA229155115009CAB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8251AA429155118009CAB34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8251AA729155118009CAB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8251AA929155118009CAB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +58,33 @@
 		B8251AD629155929009CAB34 /* SMKTVChatRoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMKTVChatRoomView.m; sourceTree = "<group>"; };
 		B8251AD82915593B009CAB34 /* SMKTVGameRoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMKTVGameRoomView.h; sourceTree = "<group>"; };
 		B8251AD92915593B009CAB34 /* SMKTVGameRoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMKTVGameRoomView.m; sourceTree = "<group>"; };
+		B89348752915F37300C24DAF /* SMKTVManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMKTVManager.h; sourceTree = "<group>"; };
+		B89348762915F37300C24DAF /* SMKTVManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMKTVManager.m; sourceTree = "<group>"; };
+		B89348792915F45700C24DAF /* SMGatewayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMGatewayManager.h; sourceTree = "<group>"; };
+		B893487A2915F45700C24DAF /* SMGatewayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMGatewayManager.m; sourceTree = "<group>"; };
+		B893487F2915F4D400C24DAF /* SMSeatManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSeatManager.h; sourceTree = "<group>"; };
+		B89348802915F4D400C24DAF /* SMSeatManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSeatManager.m; sourceTree = "<group>"; };
+		B89348862915F51F00C24DAF /* SMUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUserManager.h; sourceTree = "<group>"; };
+		B89348872915F51F00C24DAF /* SMUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMUserManager.m; sourceTree = "<group>"; };
+		B89348892915F55900C24DAF /* SMUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUser.h; sourceTree = "<group>"; };
+		B893488A2915F55900C24DAF /* SMUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMUser.m; sourceTree = "<group>"; };
+		B893488C2915F57000C24DAF /* SMSeat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSeat.h; sourceTree = "<group>"; };
+		B893488D2915F57000C24DAF /* SMSeat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSeat.m; sourceTree = "<group>"; };
+		B893488F2915F58F00C24DAF /* SMMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMMessage.h; sourceTree = "<group>"; };
+		B89348902915F58F00C24DAF /* SMMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMessage.m; sourceTree = "<group>"; };
+		B89348922915F69700C24DAF /* SMRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMRoom.h; sourceTree = "<group>"; };
+		B89348932915F69700C24DAF /* SMRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMRoom.m; sourceTree = "<group>"; };
+		B89348972915FDD800C24DAF /* QMBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMBaseModel.h; sourceTree = "<group>"; };
+		B89348982915FDD800C24DAF /* QMBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMBaseModel.m; sourceTree = "<group>"; };
+		B893489C2915FF0200C24DAF /* DemoPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPrefix.pch; sourceTree = "<group>"; };
+		B89348A0291617F600C24DAF /* SMMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMMessageView.h; sourceTree = "<group>"; };
+		B89348A1291617F600C24DAF /* SMMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMessageView.m; sourceTree = "<group>"; };
+		B89348A42916195400C24DAF /* SMMessageViewBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMMessageViewBaseCell.h; sourceTree = "<group>"; };
+		B89348A52916195400C24DAF /* SMMessageViewBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMessageViewBaseCell.m; sourceTree = "<group>"; };
+		B89348A72916199400C24DAF /* SMMessageViewNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMMessageViewNormalCell.h; sourceTree = "<group>"; };
+		B89348A82916199400C24DAF /* SMMessageViewNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMessageViewNormalCell.m; sourceTree = "<group>"; };
+		B89348AA291619AA00C24DAF /* SMMessageViewSystemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMMessageViewSystemCell.h; sourceTree = "<group>"; };
+		B89348AB291619AA00C24DAF /* SMMessageViewSystemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMessageViewSystemCell.m; sourceTree = "<group>"; };
 		D57D88E0AD22E67585654EA0 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,7 +106,6 @@
 				2FFD4BFFEA4836E4A0E27EE3 /* Pods-Demo.debug.xcconfig */,
 				6A2B5EB7DD4F8D7AC8C31E3C /* Pods-Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -98,11 +135,11 @@
 				B8251AB329155253009CAB34 /* Libraries */,
 				B8251A9829155115009CAB34 /* AppDelegate.h */,
 				B8251A9929155115009CAB34 /* AppDelegate.m */,
-				B8251AA129155115009CAB34 /* Main.storyboard */,
 				B8251AA429155118009CAB34 /* Assets.xcassets */,
 				B8251AA629155118009CAB34 /* LaunchScreen.storyboard */,
 				B8251AA929155118009CAB34 /* Info.plist */,
 				B8251AAA29155118009CAB34 /* main.m */,
+				B893489C2915FF0200C24DAF /* DemoPrefix.pch */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -119,6 +156,8 @@
 		B8251AB22915523C009CAB34 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B893489A2915FDFE00C24DAF /* Config */,
+				B89348732915F33B00C24DAF /* KTV */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -161,6 +200,14 @@
 		B8251AB729155277009CAB34 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B89348922915F69700C24DAF /* SMRoom.h */,
+				B89348932915F69700C24DAF /* SMRoom.m */,
+				B89348892915F55900C24DAF /* SMUser.h */,
+				B893488A2915F55900C24DAF /* SMUser.m */,
+				B893488C2915F57000C24DAF /* SMSeat.h */,
+				B893488D2915F57000C24DAF /* SMSeat.m */,
+				B893488F2915F58F00C24DAF /* SMMessage.h */,
+				B89348902915F58F00C24DAF /* SMMessage.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +215,8 @@
 		B8251AB82915527D009CAB34 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B89348752915F37300C24DAF /* SMKTVManager.h */,
+				B89348762915F37300C24DAF /* SMKTVManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -175,8 +224,8 @@
 		B8251AC22915530F009CAB34 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B8251AC329155321009CAB34 /* SMHomeViewController.h */,
-				B8251AC429155321009CAB34 /* SMHomeViewController.m */,
+				B89348962915FDB500C24DAF /* Model */,
+				B89348952915FDAF00C24DAF /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -233,8 +282,8 @@
 		B8251ACE291558D9009CAB34 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B8251AD529155929009CAB34 /* SMKTVChatRoomView.h */,
-				B8251AD629155929009CAB34 /* SMKTVChatRoomView.m */,
+				B8251AD82915593B009CAB34 /* SMKTVGameRoomView.h */,
+				B8251AD92915593B009CAB34 /* SMKTVGameRoomView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,8 +298,8 @@
 		B8251AD0291558E5009CAB34 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B8251AD82915593B009CAB34 /* SMKTVGameRoomView.h */,
-				B8251AD92915593B009CAB34 /* SMKTVGameRoomView.m */,
+				B8251AD529155929009CAB34 /* SMKTVChatRoomView.h */,
+				B8251AD629155929009CAB34 /* SMKTVChatRoomView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +309,92 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B89348732915F33B00C24DAF /* KTV */ = {
+			isa = PBXGroup;
+			children = (
+				B893489F2915FFF200C24DAF /* User */,
+				B893489E2915FFEC00C24DAF /* Message */,
+				B893489D2915FFE400C24DAF /* Seat */,
+				B89348782915F3AE00C24DAF /* Service */,
+			);
+			path = KTV;
+			sourceTree = "<group>";
+		};
+		B89348782915F3AE00C24DAF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B89348792915F45700C24DAF /* SMGatewayManager.h */,
+				B893487A2915F45700C24DAF /* SMGatewayManager.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B89348952915FDAF00C24DAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8251AC329155321009CAB34 /* SMHomeViewController.h */,
+				B8251AC429155321009CAB34 /* SMHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B89348962915FDB500C24DAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B89348972915FDD800C24DAF /* QMBaseModel.h */,
+				B89348982915FDD800C24DAF /* QMBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B893489A2915FDFE00C24DAF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B893489D2915FFE400C24DAF /* Seat */ = {
+			isa = PBXGroup;
+			children = (
+				B893487F2915F4D400C24DAF /* SMSeatManager.h */,
+				B89348802915F4D400C24DAF /* SMSeatManager.m */,
+			);
+			path = Seat;
+			sourceTree = "<group>";
+		};
+		B893489E2915FFEC00C24DAF /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				B89348A32916190600C24DAF /* Cell */,
+				B89348A0291617F600C24DAF /* SMMessageView.h */,
+				B89348A1291617F600C24DAF /* SMMessageView.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		B893489F2915FFF200C24DAF /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B89348862915F51F00C24DAF /* SMUserManager.h */,
+				B89348872915F51F00C24DAF /* SMUserManager.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B89348A32916190600C24DAF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B89348A42916195400C24DAF /* SMMessageViewBaseCell.h */,
+				B89348A52916195400C24DAF /* SMMessageViewBaseCell.m */,
+				B89348A72916199400C24DAF /* SMMessageViewNormalCell.h */,
+				B89348A82916199400C24DAF /* SMMessageViewNormalCell.m */,
+				B89348AA291619AA00C24DAF /* SMMessageViewSystemCell.h */,
+				B89348AB291619AA00C24DAF /* SMMessageViewSystemCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E37BD98BD3B8641A82548FBE /* Frameworks */ = {
@@ -331,7 +466,6 @@
 			files = (
 				B8251AA829155118009CAB34 /* LaunchScreen.storyboard in Resources */,
 				B8251AA529155118009CAB34 /* Assets.xcassets in Resources */,
-				B8251AA329155115009CAB34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,14 +518,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B893488E2915F57000C24DAF /* SMSeat.m in Sources */,
+				B89348AC291619AA00C24DAF /* SMMessageViewSystemCell.m in Sources */,
 				B8251A9A29155115009CAB34 /* AppDelegate.m in Sources */,
+				B89348772915F37300C24DAF /* SMKTVManager.m in Sources */,
+				B89348882915F51F00C24DAF /* SMUserManager.m in Sources */,
 				B8251AD429155906009CAB34 /* SMBaseKTVRoomView.m in Sources */,
+				B893488B2915F55900C24DAF /* SMUser.m in Sources */,
 				B8251AC1291552FD009CAB34 /* SMKTVGameRoomController.m in Sources */,
 				B8251AD729155929009CAB34 /* SMKTVChatRoomView.m in Sources */,
 				B8251AAB29155118009CAB34 /* main.m in Sources */,
+				B89348992915FDD800C24DAF /* QMBaseModel.m in Sources */,
+				B89348912915F58F00C24DAF /* SMMessage.m in Sources */,
+				B893487B2915F45700C24DAF /* SMGatewayManager.m in Sources */,
+				B89348A62916195400C24DAF /* SMMessageViewBaseCell.m in Sources */,
 				B8251ABB291552BD009CAB34 /* SMBaseKTVRoomController.m in Sources */,
+				B89348A92916199400C24DAF /* SMMessageViewNormalCell.m in Sources */,
+				B89348A2291617F600C24DAF /* SMMessageView.m in Sources */,
 				B8251AC829155416009CAB34 /* SMKTVChatRoomController.m in Sources */,
 				B8251ADA2915593B009CAB34 /* SMKTVGameRoomView.m in Sources */,
+				B89348812915F4D400C24DAF /* SMSeatManager.m in Sources */,
+				B89348942915F69700C24DAF /* SMRoom.m in Sources */,
 				B8251AC529155321009CAB34 /* SMHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,14 +546,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B8251AA129155115009CAB34 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B8251AA229155115009CAB34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B8251AA629155118009CAB34 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -537,13 +676,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				GCC_PREFIX_HEADER = /Users/weilihua/Desktop/Workspace/iOS/Demo/Demo/DemoPrefix.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,7 +693,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.starmakerapp.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -565,13 +706,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				GCC_PREFIX_HEADER = /Users/weilihua/Desktop/Workspace/iOS/Demo/Demo/DemoPrefix.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,7 +723,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.starmakerapp.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -6,10 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SMBaseKTVRoomView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SMBaseKTVRoomController : UIViewController
+@interface SMBaseKTVRoomController : UIViewController<SMBaseKTVRoomViewDelegate>
+
+@property(nonatomic, strong)SMBaseKTVRoomView *baseView;
 
 @end
 

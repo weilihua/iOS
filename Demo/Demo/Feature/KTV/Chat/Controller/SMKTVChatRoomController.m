@@ -11,8 +11,6 @@
 
 @interface SMKTVChatRoomController ()
 
-@property(nonatomic, strong)SMKTVChatRoomView *chatView;
-
 @end
 
 @implementation SMKTVChatRoomController
@@ -24,30 +22,9 @@
 }
 
 - (void)initView {
-    self.chatView = [[SMKTVChatRoomView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.chatView];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 260, 100, 25);
-    [button setTitle:@"切换游戏房" forState:UIControlStateNormal];
-    [button setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(btnChatEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-}
-
-- (void)btnChatEvent:(UIButton *)sender {
-    SMKTVGameRoomController *vc = [SMKTVGameRoomController new];
-    [self.navigationController pushViewController:vc animated:NO];
-    
-    NSMutableArray *vcs = [NSMutableArray new];
-    [vcs addObjectsFromArray:self.navigationController.viewControllers];
-    [vcs enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:SMBaseKTVRoomController.class]) {
-            [vcs removeObject:obj];
-            *stop = YES;
-        }
-    }];
-    self.navigationController.viewControllers = vcs;
+    self.baseView = [[SMKTVChatRoomView alloc] initWithFrame:self.view.bounds];
+    self.baseView.delegate = self;
+    [self.view addSubview:self.baseView];
 }
 
 @end

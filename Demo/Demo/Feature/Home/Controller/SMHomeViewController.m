@@ -32,6 +32,7 @@
 
 - (void)btnChatEvent:(UIButton *)sender {
     SMKTVChatRoomController *vc = [SMKTVChatRoomController new];
+    self.navigationController.navigationBarHidden = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
